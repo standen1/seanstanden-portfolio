@@ -12,6 +12,6 @@ describe('Error Boundary', () => {
         <ThrowError />
       </ErrorBoundary>
     );
-  expect(screen.getByTestId('errorBoundary')).toBeVisible();
+    expect(screen.getByTestId('errorBoundary')).toBeVisible();
     });
   });
