@@ -25,10 +25,10 @@ export default class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div id="errorBoundary" data-testid="errorBoundary">
+        <div data-testid="errorboundary">
             <h1>Sorry.. there was an error</h1>
         </div>
-    );
+      );
     }
 
     return this.props.children;
