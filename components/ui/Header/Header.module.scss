@@ -1,0 +1,28 @@
+.Header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    height: 60px;
+    background: colors(white);
+    color: colors(black);
+    padding: 0 20px;
+    border-bottom: 1px solid black;
+}
+
+.HeaderInner {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo {
+    width: 200px;
+    height: 40px;
+}
