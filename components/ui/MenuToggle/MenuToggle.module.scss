@@ -1,43 +1,16 @@
 .MenuToggle {
-    display: none;
-}
-
-@media screen and (max-width: 1200px) {
-    .MenuToggle {
-        display: block;
-        background: none;
-        border: none;
-        width: 35px;
-        height: 35px;
-        cursor: pointer;
-
-        .navToggleButton {
-            width: 35px;
-            height: 35px;
-        }
-    
-        span {
-            display: block;
-            width: 35px;
-            height: 5px;
-            background-color: #000;
-            margin: 6px 0;
-            transition: 0.4s;
-            border-radius: 5px;
-          }
-        .bar1Active {
-            -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-            transform: rotate(-45deg) translate(-9px, 6px) ;
-        }
-      
-        .bar2Active {
-            opacity: 0;
-        }
-      
-        .bar3Active {
-            -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-            transform: rotate(45deg) translate(-8px, -8px) ;
-        }
-        
-    }
+    outline: none;
+    border: none;
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    top: 15px;
+    right: 12px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
 }
