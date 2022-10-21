@@ -3,11 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Header.module.scss';
 
-//import MenuToggle from '../MenuToggle/MenuToggle';
+import MenuToggle from '../MenuToggle/MenuToggle';
+import NavMenuMobile from '../NavMenuMobile/NavMenuMobile';
+import Modal from '../Modal/Modal';
 
 
 export default function Header(): JSX.Element {
-    const [toggleMenu, setToggleMenu] = useState(false);
+    const [ navBarOpen, setNavBarOpen ] = useState(false);
+    const closeNavBar = () => setNavBarOpen(false);
 
   return (
     <header className={styles.Header} data-testid="site-header">
@@ -22,9 +25,11 @@ export default function Header(): JSX.Element {
                         height={111}
                     />
                 </div>
-                {/* <MenuToggle active={toggleMenu} onClick={() => setToggleMenu(!toggleMenu)} /> */}
             </div>
         </Link>
+        <MenuToggle toggle={() => setNavBarOpen(!navBarOpen)} isOpen={navBarOpen} />
+        <NavMenuMobile isOpen={navBarOpen} closeNavBar={closeNavBar} />
+        {navBarOpen && <Modal isOpen={navBarOpen} closeNavBar={closeNavBar} /> }
     </header>
   )
 }
