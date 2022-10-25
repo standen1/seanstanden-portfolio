@@ -5,6 +5,7 @@ import styles from './Header.module.scss';
 
 import MenuToggle from '../MenuToggle/MenuToggle';
 import NavMenuMobile from '../NavMenuMobile/NavMenuMobile';
+import NavMenuDesktop from '../NavMenuDesktop/NavMenuDesktop';
 import Modal from '../Modal/Modal';
 
 
@@ -26,6 +27,7 @@ export default function Header(): JSX.Element {
                     />
                 </div>
                 {/* <MenuToggle toggle={() => setNavBarOpen(!navBarOpen)} isOpen={navBarOpen} /> */}
+                {/* {<NavMenuDesktop />} */}
             </div>
         </Link>
         <NavMenuMobile isOpen={navBarOpen} closeNavBar={closeNavBar} />
