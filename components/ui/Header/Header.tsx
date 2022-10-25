@@ -25,7 +25,7 @@ export default function Header(): JSX.Element {
                         height={111}
                     />
                 </div>
-                <MenuToggle toggle={() => setNavBarOpen(!navBarOpen)} isOpen={navBarOpen} />
+                {/* <MenuToggle toggle={() => setNavBarOpen(!navBarOpen)} isOpen={navBarOpen} /> */}
             </div>
         </Link>
         <NavMenuMobile isOpen={navBarOpen} closeNavBar={closeNavBar} />
