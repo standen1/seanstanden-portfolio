@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Sean Standen | Web Developer</title>
         <meta name="description" content="Web Developer from San Diego who specializes in modern JavaScript frameworks." />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="favicon/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
