@@ -33,6 +33,14 @@ export default function NavMenuMobile({isOpen, closeNavBar}: NavMenuMobileProps)
             </motion.li>
             <motion.li variants={navLinkAnimation}>
               <Link 
+                href="/#skills-and-technologies"
+                onClick={closeNavBar}
+              >
+                <div><a onClick={closeNavBar}>Skills And Technologies</a></div>
+              </Link>
+            </motion.li>
+            <motion.li variants={navLinkAnimation}>
+              <Link 
                 href="/#portfolio"
                 onClick={closeNavBar}
               >
