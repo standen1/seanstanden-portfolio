@@ -7,7 +7,7 @@ import {
     navBGAnimation, 
     navMenuAnimation,
     navLinkAnimation 
-}  from '../../../animations/NavBar';
+}  from '../../../../animations/NavBar';
 
 export interface NavMenuMobileProps {
     isOpen: boolean;
