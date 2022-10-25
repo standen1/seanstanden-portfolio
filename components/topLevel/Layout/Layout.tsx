@@ -4,7 +4,7 @@ import Header from '../../ui/Header/Header';
 export default function Layout(props: any): JSX.Element {
   return (
     <>
-        {/* <Header /> */}
+        <Header />
         { props.children } 
     </>
   )
