@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 
 //dynamic imports
-const NavMenuDesktop = dynamic(() => import('./NavMenuDesktop/NavMenuDesktop'))
+const NavMenuDesktop = dynamic(() => import('./NavMenuDesktop/NavMenuDesktop'));
 const NavMenuMobile = dynamic(() => import('./NavMenuMobile/NavMenuMobile'));
 const MenuToggle = dynamic(() => import('./MenuToggle/MenuToggle'));
 const Modal = dynamic(() => import('../Modal/Modal'));

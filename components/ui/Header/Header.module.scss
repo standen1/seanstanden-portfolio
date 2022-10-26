@@ -6,10 +6,11 @@
     width: 100%;
     margin: 0;
     height: 60px;
-    background: colors(white);
+    background: #fff;
     color: colors(black);
     padding: 0 20px;
     border-bottom: 1px solid black;
+    z-index: 100;
 }
 
 .HeaderInner {
