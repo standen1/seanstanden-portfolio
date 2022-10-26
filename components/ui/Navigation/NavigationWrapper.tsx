@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 
 //dynamic imports
@@ -9,17 +9,21 @@ const Modal = dynamic(() => import('../Modal/Modal'));
 
 export default function NavigationWrapper() {
     const [ navBarOpen, setNavBarOpen ] = useState(false);
+    const [ isMobile, setIsMobile ] = useState(false);
+
     const closeNavBar = () => setNavBarOpen(false);
 
-    const [ responsive, setResponsive ] = useState(false);
-    useEffect(() => {
-        const screenSize = window.matchMedia('max-width: 1000px');
-        if (screenSize) {
-            setResponsive(true);
+    const handleResize = () => {
+        if (window.innerWidth <= 900) {
+            setIsMobile(true);
         } else {
-            setResponsive(false);
+            setIsMobile(false);
         }
-    }, []);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+    })
 
     const mobileMenu = (
         <>
@@ -32,7 +36,7 @@ export default function NavigationWrapper() {
 
   return (
     <>
-        {responsive ? mobileMenu : <NavMenuDesktop />}
+        { isMobile ? mobileMenu : <NavMenuDesktop /> }
     </>
   )
 }
