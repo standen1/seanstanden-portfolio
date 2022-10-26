@@ -3,7 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 
-import ComingSoon from '../components/ui/ComingSoon/ComingSoon'
+import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
+import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +16,21 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <ComingSoon />
+        
+        {/* <FullScreenImageOrVideo
+          backgroundURL="/background-images/record-vid-still.png"
+          isVideo={false}
+          alt="Record Spinning on a turntable."
+        >
+          <ComingSoon />
+        </FullScreenImageOrVideo> */}
+        <FullScreenImageOrVideo
+          backgroundURL="/videos/record-video-compressed.mp4"
+          isVideo={true}
+          poster="/background-images/record-vid-still.png"
+        >
+          <ComingSoon />
+        </FullScreenImageOrVideo>
       </main>
 
     </>
