@@ -7,7 +7,7 @@ import ComingSoon from '../components/ui/ComingSoon/ComingSoon'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Sean Standen | Web Developer</title>
         <meta name="description" content="Web Developer from San Diego who specializes in modern JavaScript frameworks." />
@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <ComingSoon />
       </main>
 
-    </div>
+    </>
   )
 }
 
