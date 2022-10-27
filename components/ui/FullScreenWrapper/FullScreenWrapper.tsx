@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FullScreenWrapper.module.scss';
+import styled from 'styled-components';
 
 export interface FullScreenWrapperProps {
     backgroundURL: string;
@@ -9,8 +9,14 @@ export interface FullScreenWrapperProps {
 
 export default function FullScreenWrapperWithBackground() {
   return (
-    <div className={styles.FullScreenWrapper}>
+    <Div>
 
-    </div>
+    </Div>
   )
 }
+
+const Div = styled.div`
+  display: block;
+  width: 100%;
+  height: 100vh;
+`;

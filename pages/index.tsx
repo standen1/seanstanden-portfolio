@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import styled from 'styled-components';
 
 import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
 import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="favicon/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <Main>
         
         {/* <FullScreenImageOrVideo
           backgroundURL="/background-images/record-vid-still.png"
@@ -31,10 +31,21 @@ const Home: NextPage = () => {
         >
           <ComingSoon />
         </FullScreenImageOrVideo>
-      </main>
+      </Main>
 
     </>
   )
 }
 
-export default Home
+export default Home;
+
+const Main = styled.main`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    color: ${props => props.theme.white};
+`;

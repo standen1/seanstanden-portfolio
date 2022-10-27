@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import styles from './FullScreenImageOrVideo.module.scss';
+import styled from 'styled-components';
 
 export interface FullScreenImageOrVideoProps {
     backgroundURL: string;
@@ -16,7 +16,7 @@ export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, 
     const background = () => {
         if (isVideo) {
             return (
-                <div className={styles.videoWrapper}>
+                <div className='videoWrapper'>
                     <video width="100%" height="100%" preload="auto" autoPlay muted loop poster={poster} id="bgvid">
                         <source src={backgroundURL} type="video/mp4" />
                     </video>
@@ -24,7 +24,7 @@ export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, 
             );
         } else {
             return (
-                <div className={styles.imageWrapper}>
+                <div className='imageWrapper'>
                     <Image 
                         src={backgroundURL}
                         alt={alt}
@@ -37,11 +37,40 @@ export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, 
     }
 
   return (
-    <div className={styles.FullScreenImageOrVideo}>
+    <FullScreenDiv>
         { background() }
-        <div className={styles.innerContent}>
+        <div className='innerContent'>
             { children }
         </div>
-    </div>
+    </FullScreenDiv>
   )
 }
+
+const FullScreenDiv = styled.div`
+    display: block;
+    width: 100%;
+    height: 100vh;
+
+    .videoWrapper {
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .innerContent {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    }
+`;

@@ -1,7 +1,7 @@
 import React, { EventHandler } from 'react';
 import { motion } from 'framer-motion';
 import { overlayAnimation } from '../../../animations/NavBar';
-import styles from './Modal.module.scss';
+import styled from 'styled-components';
 
 export interface ModalProps {
     isOpen: boolean;
@@ -10,6 +10,15 @@ export interface ModalProps {
 
 export default function Modal({isOpen, closeNavBar}: ModalProps) {
   return (
-    <motion.div className={styles.Modal} variants={overlayAnimation} onClick={closeNavBar} />
+    <Div as={motion.div} variants={overlayAnimation} onClick={closeNavBar} />
   )
 }
+
+const Div = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+`;
