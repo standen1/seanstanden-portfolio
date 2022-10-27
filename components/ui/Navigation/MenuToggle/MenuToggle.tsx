@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MenuToggle.module.scss';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const Path = (props: any) => (
@@ -19,7 +19,7 @@ export interface MenuToggleProps {
 
 export default function MenuToggle({ toggle, isOpen }: MenuToggleProps) {
   return (
-    <button data-testid="menu-toggle" className={styles.MenuToggle} onClick={toggle}>
+    <Button data-testid="menu-toggle" onClick={toggle}>
         <svg width="23" height="23" viewBox="0 0 23 23">
         <Path
           animate={isOpen ? "open" : "closed"}
@@ -58,6 +58,20 @@ export default function MenuToggle({ toggle, isOpen }: MenuToggleProps) {
           }}
         />
       </svg>
-    </button>
+    </Button>
   )
 }
+
+const Button = styled.button`
+  outline: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    top: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: transparent;
+`;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import { motion } from 'framer-motion';
-import styles from './NavMenuMobile.module.scss';
+import styled from 'styled-components';
 
 import { 
     navBGAnimation, 
@@ -15,14 +15,8 @@ export interface NavMenuMobileProps {
 }
 export default function NavMenuMobile({isOpen, closeNavBar}: NavMenuMobileProps): JSX.Element {
     return (
-        <motion.div className={styles.NavMenuMobile} initial="closed" animate={isOpen ? "open" : "closed"} variants={navBGAnimation}>
+        <Div as={motion.div} initial="closed" animate={isOpen ? "open" : "closed"} variants={navBGAnimation}>
           <motion.ul animate={isOpen ? "open" : "closed"} variants={navMenuAnimation}>
-            <motion.li variants={navLinkAnimation}>
-              <Link 
-                href="/"
-              ><div><a onClick={closeNavBar}>Home</a></div>   
-              </Link>
-            </motion.li>
             <motion.li variants={navLinkAnimation}>
               <Link 
                 href="/#about"
@@ -55,7 +49,51 @@ export default function NavMenuMobile({isOpen, closeNavBar}: NavMenuMobileProps)
                 <div><a onClick={closeNavBar}>Contact</a></div>
               </Link>
             </motion.li>
+            <motion.li variants={navLinkAnimation}>
+              <Link 
+                href="/resume"
+              ><div><a onClick={closeNavBar}>Resume</a></div>   
+              </Link>
+            </motion.li>
           </motion.ul>
-        </motion.div>
+        </Div>
       )
 }
+
+const Div = styled.div`
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100vh;
+  z-index: 90;
+  background: ${props => props.theme.secondary};
+
+  ul {
+      list-style-type: none;
+      width: 100%;
+      overflow: hidden;
+      li {
+      width: 100%;
+      transition: all 0.2s ease;
+      a {
+          display: block;
+          padding: 15px 30px;
+          color: ${props => props.theme.white};
+          font-size: 1.5rem;
+          font-weight: 300;
+          transition: color 0.2s ease;
+          width: 100%;
+      }
+      &:hover {
+          a {
+            color: ${props => props.theme.primary};      
+            cursor: pointer;
+          }
+      }
+      }
+  }
+`;

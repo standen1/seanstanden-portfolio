@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './Footer.module.scss';
+import styled from 'styled-components';
 
 //Import images
 import Logo from '../../../public/logo/SStanden_Logo_2_White.png';
@@ -9,8 +9,8 @@ import GitHub from '../../../public/social-media/github.png';
 
 export default function Footer() {
   return (
-    <footer className={styles.Footer} data-testid="site-footer">
-        <div className={styles.Wrapper}>
+    <SiteFooter data-testid="site-footer">
+        <div className="footer-wrapper">
             <div className='social-wrapper'>
                 <Link href="/">
                     <a className='social-image-wrapper'>
@@ -43,6 +43,44 @@ export default function Footer() {
                 {'\u00A9'}Sean Standen {new Date().getFullYear()}
             </p>
         </div>
-    </footer>
+    </SiteFooter>
   )
 };
+
+const SiteFooter = styled.footer`
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: ${props => props.theme.black};
+    color: ${props => props.theme.white};
+    padding: 10px 20px;
+    z-index: 100;
+
+    .footer-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .social-wrapper {
+            display: flex;
+            justify-content: center;
+            column-gap: 30px;
+            
+        }
+
+        p {
+            display: block;
+            text-align: center;
+            font-size: 0.9em;
+            font-weight: 300;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }  
+    }
+`;

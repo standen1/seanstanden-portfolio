@@ -20,7 +20,7 @@
 				"esbenp.prettier-vscode",
 				"formulahendry.auto-rename-tag",
 				"iJS.reactnextjssnippets",
-				"syler.sass-indented"
+				"styled-components.vscode-styled-components"
 			]
 		}
 	},
