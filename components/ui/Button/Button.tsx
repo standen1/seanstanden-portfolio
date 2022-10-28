@@ -4,15 +4,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 export interface ButtonProps {
-    background: "primay" | "secondary";
+    background: "primary" | "secondary";
     onClick: Function;
     linkUrl: string;
     children: any;
 }
 
 export default function Button({background, onClick, children, linkUrl}: ButtonProps) {
+  // const handleClick = (): void => {
+  //   onClick();
+  //   window.open(linkUrl, '_blank');
+  // }
   return (
-    <ButtonLink background={background} href={linkUrl} onClick={onClick}>{children}</ButtonLink>
+    <ButtonLink background={background} href={linkUrl} target="blank" onClick={onClick}>{children}</ButtonLink>
   )
 }
 
