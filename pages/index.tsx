@@ -11,6 +11,7 @@ import Button from '../components/ui/Button/Button';
 import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
 import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
 import FullScreenWrapper from '../components/ui/FullScreenWrapper/FullScreenWrapper';
+import PortfolioPopover from '../components/ui/PortfolioPopover/PortfolioPopover';
 
 const Home: NextPage = () => {
   return (
@@ -33,10 +34,11 @@ const Home: NextPage = () => {
         </FullScreenImageOrVideo>
         </section>
 
-        {/* <section id="about" style={{position: 'relative'}}>
+        <section id="about" style={{position: 'relative'}}>
           <FullScreenWrapper>
+            <PortfolioPopover title="MySite" technologyStack={["Java", "C#", "JavaScript", "Node"]} siteUrl="https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html" codeUrl='https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html' />
           </FullScreenWrapper>
-        </section> */}
+        </section>
       </Main>
     </>
   )

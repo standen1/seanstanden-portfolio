@@ -5,12 +5,12 @@ import styled from 'styled-components';
 
 export interface ModalProps {
     isOpen: boolean;
-    closeNavBar: any;
+    close: any;
 }
 
-export default function Modal({isOpen, closeNavBar}: ModalProps) {
+export default function Modal({isOpen, close}: ModalProps) {
   return (
-    <Div as={motion.div} variants={overlayAnimation} onClick={closeNavBar} />
+    <Div as={motion.div} variants={overlayAnimation} onClick={close} />
   )
 }
 
