@@ -2,7 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components';
+
 import CloseIcon from '../components/ui/CloseIcon/CloseIcon';
+
+import Button from '../components/ui/Button/Button';
+
 
 import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
 import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
@@ -31,7 +35,6 @@ const Home: NextPage = () => {
 
         {/* <section id="about" style={{position: 'relative'}}>
           <FullScreenWrapper>
-            Testing this component!!!!!
           </FullScreenWrapper>
         </section> */}
       </Main>
