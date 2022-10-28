@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
 import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
+import FullScreenWrapper from '../components/ui/FullScreenWrapper/FullScreenWrapper';
 
 const Home: NextPage = () => {
   return (
@@ -16,14 +17,8 @@ const Home: NextPage = () => {
       </Head>
 
       <Main>
-        
-        {/* <FullScreenImageOrVideo
-          backgroundURL="/background-images/record-vid-still.png"
-          isVideo={false}
-          alt="Record Spinning on a turntable."
-        >
-          <ComingSoon />
-        </FullScreenImageOrVideo> */}
+
+        <section id="welcome">
         <FullScreenImageOrVideo
           backgroundURL="/videos/record-video-compressed.mp4"
           isVideo={true}
@@ -31,8 +26,14 @@ const Home: NextPage = () => {
         >
           <ComingSoon />
         </FullScreenImageOrVideo>
-      </Main>
+        </section>
 
+        {/* <section id="about">
+          <FullScreenWrapper>
+            Testing this component!!!!!
+          </FullScreenWrapper>
+        </section> */}
+      </Main>
     </>
   )
 }
@@ -40,12 +41,6 @@ const Home: NextPage = () => {
 export default Home;
 
 const Main = styled.main`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0;
     margin: 0;
-    color: ${props => props.theme.white};
 `;

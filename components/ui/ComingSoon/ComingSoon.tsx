@@ -1,7 +1,17 @@
+import styled from "styled-components";
+
 export default function ComingSoon(): JSX.Element {
     return (
-        <div>
+        <Div>
            <h1>Coming Soon</h1> 
-        </div>
+        </Div>
     );
 }
+
+const Div = styled.div`
+    color: #fff;
+    
+    h1 {
+        font-size: 2em;
+    }
+`;
