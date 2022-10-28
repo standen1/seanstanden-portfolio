@@ -29,12 +29,11 @@ const Home: NextPage = () => {
         </FullScreenImageOrVideo>
         </section>
 
-        <section id="about" style={{position: 'relative'}}>
-          <CloseIcon onClick={() => console.log('clicked.')} color="#000" />
+        {/* <section id="about" style={{position: 'relative'}}>
           <FullScreenWrapper>
             Testing this component!!!!!
           </FullScreenWrapper>
-        </section>
+        </section> */}
       </Main>
     </>
   )
