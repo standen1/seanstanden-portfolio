@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components';
+import CloseIcon from '../components/ui/CloseIcon/CloseIcon';
 
 import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
 import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
@@ -28,11 +29,12 @@ const Home: NextPage = () => {
         </FullScreenImageOrVideo>
         </section>
 
-        {/* <section id="about">
+        <section id="about" style={{position: 'relative'}}>
+          <CloseIcon onClick={() => console.log('clicked.')} color="#000" />
           <FullScreenWrapper>
             Testing this component!!!!!
           </FullScreenWrapper>
-        </section> */}
+        </section>
       </Main>
     </>
   )
