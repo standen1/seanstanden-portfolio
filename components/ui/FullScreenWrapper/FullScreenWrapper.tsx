@@ -3,15 +3,17 @@ import styled from 'styled-components';
 
 export interface FullScreenWrapperProps {
   children: any;
-  background?: string;
+  useBackground?: string;
 }
 
-export default function FullScreenWrapper({children, background}: FullScreenWrapperProps) {
+export default function FullScreenWrapper({children, useBackground}: FullScreenWrapperProps) {
   const [ containerHeight, setContainerHeight ] = useState('100vh');
 
     const handleResize = () => {
         setContainerHeight(`${window.innerHeight}px`);
     }
+
+    const background = useBackground ? useBackground : '#fff';
 
     useEffect(() => {
         window.addEventListener('resize', handleResize);
@@ -20,7 +22,9 @@ export default function FullScreenWrapper({children, background}: FullScreenWrap
 
   return (
     <Div height={containerHeight} background={background}>
-
+      <div className='innerContent'>
+        {children}
+      </div>
     </Div>
   )
 }
@@ -33,6 +37,14 @@ interface FullScreenDivProps {
 const Div = styled.div<FullScreenDivProps>`
   display: block;
   width: 100%;
-  background = ${props => props.background};
+  background: ${props => props.background};
   height: ${props => props.height};
+  .innerContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+  }
 `;
