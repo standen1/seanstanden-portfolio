@@ -12,16 +12,6 @@ export default function Footer() {
     <SiteFooter data-testid="site-footer">
         <div className="footer-wrapper">
             <div className='social-wrapper'>
-                <Link href="/">
-                    <a className='social-image-wrapper'>
-                        <Image 
-                            src={Logo}
-                            alt="Sean Standen | Web Developer"
-                            width={19.3}
-                            height={32}
-                        />
-                    </a>
-                </Link>
                 <a className='social-image-wrapper' href="https://www.linkedin.com/in/sean-standen" target="blank">
                     <Image
                         src={LinkedIn}
@@ -48,12 +38,12 @@ export default function Footer() {
 };
 
 const SiteFooter = styled.footer`
-    position: fixed;
+    position: relative;
     bottom: 0;
     right: 0;
     left: 0;
     width: 100%;
-    height: 65px;
+    height: 50px;
     background: ${props => props.theme.black};
     color: ${props => props.theme.white};
     padding: 10px 20px;

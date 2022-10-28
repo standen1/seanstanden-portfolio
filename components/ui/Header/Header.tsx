@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import logo from '../../../public/logo/SStanden_Logo_2_Text.png';
 import NavigationWrapper from '../Navigation/NavigationWrapper';
 
 
@@ -10,17 +11,16 @@ export default function Header(): JSX.Element {
 
   return (
     <SiteHeader data-testid="site-header">
-            <div className='header-inner'>
-                <Link href="/">
-                    <div className='logo'>
+            <div className='headerInner'>
+                <Link className='logo' href="/">
                         <Image 
-                            src="/logo/SStanden_Logo_With_Text.png" 
+                            src={logo} 
                             alt="Sean Standen | Web Developer"
-                            layout="intrinsic"
-                            width={500}
-                            height={111}
+                            width={250}
+                            height={20.5}
+                            
                         />
-                    </div>
+                    
                 </Link>
                 {/* <NavigationWrapper /> */}
             </div>
@@ -42,7 +42,7 @@ const SiteHeader = styled.header`
   border-bottom: 1px solid ${props => props.theme.black};
   z-index: 100;
 
-  .header-inner {
+  .headerInner {
     width: 100%;
     max-width: 1200px;
     height: 100%;
@@ -53,7 +53,7 @@ const SiteHeader = styled.header`
   }
 
   .logo {
-      width: 200px;
-      height: 40px;
+      width: 250px;
+      height: 21px;
   }
 `;
