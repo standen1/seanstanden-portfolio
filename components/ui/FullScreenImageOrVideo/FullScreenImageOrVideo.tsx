@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import styled from 'styled-components';
@@ -11,7 +11,19 @@ export interface FullScreenImageOrVideoProps {
     children: any;
 }
 
+type screenHeight = number | undefined;
+
 export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, poster, alt = "Sean Standen | Web Developer", children}: FullScreenImageOrVideoProps): JSX.Element {
+    const [ containerHeight, setContainerHeight ] = useState('100vh');
+
+    const handleResize = () => {
+        setContainerHeight(`${window.innerHeight}px`);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return (): void => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const background = () => {
         if (isVideo) {
@@ -28,8 +40,8 @@ export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, 
                     <Image 
                         src={backgroundURL}
                         alt={alt}
-                        layout="fill"
-                        objectFit='cover'
+                        fill
+                        
                     />
                 </div>
             );
@@ -37,7 +49,7 @@ export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, 
     }
 
   return (
-    <FullScreenDiv>
+    <FullScreenDiv height={containerHeight} >
         { background() }
         <div className='innerContent'>
             { children }
@@ -46,16 +58,20 @@ export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, 
   )
 }
 
-const FullScreenDiv = styled.div`
+interface FullScreenDivProps {
+    height: string;
+}
+
+const FullScreenDiv = styled.div<FullScreenDivProps>`
     display: block;
     width: 100%;
-    height: 100vh;
+    height: ${props => props.height};
 
     .videoWrapper {
         video {
             object-fit: cover;
             width: 100%;
-            height: 100vh;
+            height: ${props => props.height};
             top: 0;
             left: 0;
         }

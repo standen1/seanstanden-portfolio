@@ -17,7 +17,7 @@ export default function NavMenuMobile({isOpen, closeNavBar}: NavMenuMobileProps)
     return (
         <Div as={motion.div} initial="closed" animate={isOpen ? "open" : "closed"} variants={navBGAnimation}>
           <motion.ul animate={isOpen ? "open" : "closed"} variants={navMenuAnimation}>
-            <motion.li variants={navLinkAnimation}>
+            {/* <motion.li variants={navLinkAnimation}>
               <Link 
                 href="/#about"
                 onClick={closeNavBar}
@@ -48,11 +48,11 @@ export default function NavMenuMobile({isOpen, closeNavBar}: NavMenuMobileProps)
               >
                 <div><a onClick={closeNavBar}>Contact</a></div>
               </Link>
-            </motion.li>
+            </motion.li> */}
             <motion.li variants={navLinkAnimation}>
-              <Link 
+              <Link onClick={closeNavBar}
                 href="/resume"
-              ><div><a onClick={closeNavBar}>Resume</a></div>   
+              >Resume  
               </Link>
             </motion.li>
           </motion.ul>
