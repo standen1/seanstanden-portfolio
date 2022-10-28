@@ -1,22 +1,38 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 export interface FullScreenWrapperProps {
-    backgroundURL: string;
-    isVideo?: boolean;
-    isImage?: boolean;
+  children: any;
+  background?: string;
 }
 
-export default function FullScreenWrapperWithBackground() {
+export default function FullScreenWrapper({children, background}: FullScreenWrapperProps) {
+  const [ containerHeight, setContainerHeight ] = useState('100vh');
+
+    const handleResize = () => {
+        setContainerHeight(`${window.innerHeight}px`);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+        return (): void => window.removeEventListener('resize', handleResize);
+    }, []);
+
   return (
-    <Div>
+    <Div height={containerHeight} background={background}>
 
     </Div>
   )
 }
 
-const Div = styled.div`
+interface FullScreenDivProps {
+  height: string;
+  background: string;
+}
+
+const Div = styled.div<FullScreenDivProps>`
   display: block;
   width: 100%;
-  height: 100vh;
+  background = ${props => props.background};
+  height: ${props => props.height};
 `;
