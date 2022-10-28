@@ -8,7 +8,9 @@ describe('ComingSoon Component', () => {
         expect(getByText('Coming Soon')).toBeInTheDocument();
         expect(asFragment()).toMatchInlineSnapshot(`
 <DocumentFragment>
-  <div>
+  <div
+    class="sc-b850c227-0 izVre"
+  >
     <h1>
       Coming Soon
     </h1>
