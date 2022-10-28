@@ -1,23 +1,41 @@
+import { filterProps } from 'framer-motion';
+import { Props } from 'next/script';
 import React from 'react';
 import styled from 'styled-components';
 
 export interface ButtonProps {
-    background: string;
+    background: "primay" | "secondary";
     onClick: Function;
+    linkUrl: string;
     children: any;
 }
 
-export default function Button({background, onClick, children}: ButtonProps) {
+export default function Button({background, onClick, children, linkUrl}: ButtonProps) {
   return (
-    <Button background={background} onClick={onClick}>{children}</Button>
+    <ButtonLink background={background} href={linkUrl} onClick={onClick}>{children}</ButtonLink>
   )
 }
 
 interface StyledButtonProps {
     background: string;
+    onClick: any;
+    href: string;
 }
 
-const StyledButton = styled.button<StyledButtonProps>`
-    background: ${props => props.background};
+const ButtonLink = styled.a<StyledButtonProps>`
+    display: block;
+    background: ${props => props.background === 'primary' ? props.theme.primary : props.theme.secondary};
     color: #fff;
+    width: 175px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: ${props => props.background === 'primary' ? props.theme.secondary : props.theme.primary};
+      cursor: pointer;
+    }
 `;
