@@ -1,6 +1,5 @@
 import { createGlobalStyle} from "styled-components"
-import "@fontsource/poppins"
-
+import { Poppins } from '@next/font/google';
 export const GlobalStyles = createGlobalStyle`
     * {
         box-sizing: border-box;
