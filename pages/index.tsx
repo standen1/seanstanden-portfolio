@@ -12,6 +12,7 @@ import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
 import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
 import FullScreenWrapper from '../components/ui/FullScreenWrapper/FullScreenWrapper';
 import PortfolioPopover from '../components/ui/PortfolioPopover/PortfolioPopover';
+import PortfolioItem from '../components/ui/PortfolioItem/PortfolioItem';
 
 const Home: NextPage = () => {
   return (
@@ -38,6 +39,13 @@ const Home: NextPage = () => {
           {/* <FullScreenWrapper>
             <PortfolioPopover title="MySite" technologyStack={["Java", "C#", "JavaScript", "Node"]} siteUrl="https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html" codeUrl='https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html' close={() => console.log('closePopover')} />
           </FullScreenWrapper> */}
+          <PortfolioItem portfolioItem={{
+            title: 'MySite',
+            techStack: ["Java", "C#", "JavaScript", "Node"],
+            siteUrl: 'https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html',
+            codeUrl: 'https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html',
+            background: '../../public/background-images/nature-vid-still'
+          }} />
         </section>
       </Main>
     </>
