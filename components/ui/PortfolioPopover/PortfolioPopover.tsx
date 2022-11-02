@@ -17,7 +17,7 @@ export default function PortfolioPopover({title, technologyStack, siteUrl, codeU
     const techStack = technologyStack.map((tech, index) => <li className='techItem' key={index}>{tech}</li>);
   return (
     <>
-        <Modal />
+        <Modal close={close} />
         <Div>
             <div className="popover">
                 <CloseIcon onClick={close} color="#000" />

@@ -4,11 +4,10 @@ import { overlayAnimation } from '../../../animations/NavBar';
 import styled from 'styled-components';
 
 export interface ModalProps {
-    isOpen: boolean;
     close: any;
 }
 
-export default function Modal({isOpen, close}: ModalProps) {
+export default function Modal({close}: ModalProps) {
   return (
     <Div as={motion.div} variants={overlayAnimation} onClick={close} />
   )
