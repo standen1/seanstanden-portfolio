@@ -30,7 +30,7 @@ export default function NavigationWrapper() {
             <MenuToggle toggle={() => setNavBarOpen(!navBarOpen)} isOpen={navBarOpen} />
             {/* <NavMenuDesktop /> */}
             <NavMenuMobile isOpen={navBarOpen} closeNavBar={closeNavBar} />
-            {navBarOpen && <Modal isOpen={navBarOpen} close={closeNavBar} />}
+            {navBarOpen && <Modal close={closeNavBar} />}
         </>
     );
 
