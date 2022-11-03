@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import logo from '../../../public/logo/SStanden_Logo_2_Text.png';
+import logo from '../../../public/logo/SStanden_Logo_Text_Color.png';
 import NavigationWrapper from '../Navigation/NavigationWrapper';
 
 
@@ -17,7 +17,7 @@ export default function Header(): JSX.Element {
                             src={logo} 
                             alt="Sean Standen | Web Developer"
                             width={250}
-                            height={20.5}
+                            height={30}
                             
                         />
                     
@@ -54,6 +54,6 @@ const SiteHeader = styled.header`
 
   .logo {
       width: 250px;
-      height: 21px;
+      height: 30px;
   }
 `;
