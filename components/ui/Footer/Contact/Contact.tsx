@@ -57,6 +57,7 @@ const Div = styled.div`
 
     .contact {
         max-width: 500px;
+        padding: 20px;
 
         h2 {
             text-align: center;
