@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components';
+import About from '../components/ui/About/About';
 
 //Import wrapper components
 import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
@@ -28,13 +29,14 @@ const Home: NextPage = () => {
           <Intro />
         </section>
 
-        <section id="about" style={{position: 'relative'}}>
-
+        <section id="about">
+          <About />
         </section>
         
-        <section id="portfolio" style={{padding: '100px 20px'}}>
+        <section id="portfolio">
             <Portfolio />
         </section>
+        
         <section id="contact"></section>
       </Main>
     </>
