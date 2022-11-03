@@ -14,7 +14,7 @@ export default function NavigationWrapper() {
     const closeNavBar = () => setNavBarOpen(false);
 
     const handleResize = () => {
-        if (window.innerWidth <= 900) {
+        if (window.innerWidth < 900) {
             setIsMobile(true);
         } else {
             setIsMobile(false);
@@ -22,8 +22,9 @@ export default function NavigationWrapper() {
     }
 
     useEffect(() => {
+        handleResize();
         window.addEventListener('resize', handleResize);
-    })
+    }, [])
 
     const mobileMenu = (
         <>

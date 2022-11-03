@@ -70,8 +70,7 @@ const Button = styled.button`
     z-index: 100;
     top: 20px;
     right: 20px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     background: transparent;
 `;
