@@ -66,13 +66,13 @@ const FullScreenDiv = styled.div<FullScreenDivProps>`
     display: block;
     position: relative;
     width: 100%;
-    height: ${props => props.height};
+    height: 100vh;
 
     .videoWrapper {
         video {
             object-fit: cover;
             width: 100%;
-            height: ${props => props.height};
+            height: 100vh;
             top: 0;
             left: 0;
         }
