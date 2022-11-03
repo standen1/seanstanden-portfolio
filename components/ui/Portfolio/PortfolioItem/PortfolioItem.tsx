@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Image from 'next/image';
 import PortfolioPopover from '../PortfolioPopover/PortfolioPopover';
-import { portfolioItem } from '../../../data/portfolio';
+import { portfolioItem } from '../../../../data/portfolio';
 
 
 interface PortfolioItemProps {

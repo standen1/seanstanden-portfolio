@@ -16,7 +16,7 @@ export const portfolio = [
         technologyStack: ['Next JS', 'React', 'Styled Components', 'Framer Motion', 'GitHub Actions', 'Vercel'],
         siteUrl: 'https://seanstanden.dev',
         codeUrl: 'https://github.com/standen1/seanstanden-portfolio',
-        featuredImg: '/background-images/record-vid-still'
+        featuredImg: '/background-images/record-vid-still.png'
     },
     {
         id: 2,
