@@ -5,8 +5,8 @@ import styled from 'styled-components';
 export default function NavMenuDesktop() {
   return (
     <Nav>
-        <Link href="/#about">About</Link>
-        <Link href="/#skills-and-technologies">Skills And Technologies</Link>
+        {/* <Link href="/#about">About</Link>
+        <Link href="/#skills-and-technologies">Skills And Technologies</Link> */}
         <Link href="/#portfolio">Portfolio</Link>
         <Link href="/#contact">Contact</Link>
         <Link href="/resume">Resume</Link>

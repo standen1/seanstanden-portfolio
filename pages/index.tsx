@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
 import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
 import FullScreenWrapper from '../components/ui/FullScreenWrapper/FullScreenWrapper';
+import Intro from '../components/ui/Intro/Intro';
 
 //import section components
 import Portfolio from '../components/ui/Portfolio/Portfolio';
@@ -24,23 +25,16 @@ const Home: NextPage = () => {
       <Main>
 
         <section id="welcome">
-        <FullScreenImageOrVideo
-          backgroundURL="/videos/record-video-compressed.mp4"
-          isVideo={true}
-          poster="/background-images/record-vid-still.png"
-        >
-          <ComingSoon />
-        </FullScreenImageOrVideo>
+          <Intro />
         </section>
 
         <section id="about" style={{position: 'relative'}}>
-          {/* <FullScreenWrapper>
-            
-          </FullScreenWrapper> */}
+
         </section>
-        {/* <section id="portfolio" style={{position: 'relative', padding: '100px 20px'}}>
+        
+        <section id="portfolio" style={{padding: '100px 20px'}}>
             <Portfolio />
-        </section> */}
+        </section>
       </Main>
     </>
   )

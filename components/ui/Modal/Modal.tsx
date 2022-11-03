@@ -14,10 +14,11 @@ export default function Modal({close}: ModalProps) {
 }
 
 const Div = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 50;
 `;
