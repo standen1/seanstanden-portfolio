@@ -22,7 +22,7 @@ export default function Header(): JSX.Element {
                         />
                     
                 </Link>
-                {/* <NavigationWrapper /> */}
+                <NavigationWrapper />
             </div>
     </SiteHeader>
   )
