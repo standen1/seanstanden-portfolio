@@ -5,16 +5,24 @@ import Modal from "../Modal/Modal";
 import Button from '../Button/Button';
 import CloseIcon from '../CloseIcon/CloseIcon';
 
-export interface PortfolioPopoverProps {
+interface portfolioItem {
     title: string;
     technologyStack: Array<string>;
     siteUrl: string;
     codeUrl?: string;
+}
+
+export interface PortfolioPopoverProps {
+    portfolioItem: portfolioItem
     close: any;
 }
 
-export default function PortfolioPopover({title, technologyStack, siteUrl, codeUrl, close}: PortfolioPopoverProps) {
-    const techStack = technologyStack.map((tech, index) => <li className='techItem' key={index}>{tech}</li>);
+export default function PortfolioPopover({portfolioItem, close}: PortfolioPopoverProps) {
+
+    const techStack = portfolioItem.technologyStack.map((tech, index) => <li className='techItem' key={index}>{tech}</li>);
+
+    const gitHubButton = portfolioItem.codeUrl ? <Button background='secondary' onClick={() => 'clicked.'} linkUrl={portfolioItem.codeUrl}>Source Code</Button> : null;
+
   return (
     <>
         <Modal close={close} />
@@ -22,14 +30,14 @@ export default function PortfolioPopover({title, technologyStack, siteUrl, codeU
             <div className="popover">
                 <CloseIcon onClick={close} color="#000" />
                 <div className='innerContent'>
-                    <h4>{title}</h4>
+                    <h4>{portfolioItem.title}</h4>
                     <h5>Technology Stack</h5>
                     <ul>
                         { techStack }
                     </ul>
                     <div className='buttonWrapper'>
-                        <Button background='primary' onClick={() => console.log('Youclicked')} linkUrl="https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html" >Visit</Button>
-                        <Button background='secondary' onClick={() => 'clicked.'} linkUrl="https://stackoverflow.com/questions/47616355/foreach-in-react-jsx-does-not-output-any-html">Source Code</Button>
+                        <Button background='primary' onClick={() => console.log('Youclicked')} linkUrl={portfolioItem.siteUrl}>Visit</Button>
+                        {gitHubButton}
                     </div>
                 </div>
             </div>
