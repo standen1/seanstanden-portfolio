@@ -25,7 +25,7 @@ export default function NavMenuMobile({isOpen, closeNavBar}: NavMenuMobileProps)
                 Home
               </Link>
             </motion.li>
-            {/* <motion.li variants={navLinkAnimation}>
+            <motion.li variants={navLinkAnimation}>
               <Link 
                 href="/#about"
                 onClick={closeNavBar}
@@ -33,7 +33,7 @@ export default function NavMenuMobile({isOpen, closeNavBar}: NavMenuMobileProps)
                 About
               </Link>
             </motion.li>
-            <motion.li variants={navLinkAnimation}>
+            {/* <motion.li variants={navLinkAnimation}>
               <Link 
                 href="/#skills-and-technologies"
                 onClick={closeNavBar}
