@@ -27,4 +27,18 @@ export const GlobalStyles = createGlobalStyle`
     img {
         max-width: 100%;
     }
+
+    h1 {
+        font-weight: 500;
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 2em;
+    }
+
+    p {
+        font-weight: 400;
+    }
 `;

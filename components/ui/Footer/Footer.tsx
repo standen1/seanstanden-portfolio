@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
+import Contact from './Contact/Contact';
 //Import images
 import Logo from '../../../public/logo/SStanden_Logo_2_White.png';
 import LinkedIn from '../../../public/social-media/linkedin.png';
@@ -9,31 +10,16 @@ import GitHub from '../../../public/social-media/github.png';
 
 export default function Footer() {
   return (
-    <SiteFooter data-testid="site-footer">
-        <div className="footer-wrapper">
-            <div className='social-wrapper'>
-                <a className='social-image-wrapper' href="https://www.linkedin.com/in/sean-standen" target="blank">
-                    <Image
-                        src={LinkedIn}
-                        alt="LinkedIn"
-                        width={32}
-                        height={32}
-                    />
-                </a>
-                <a className='social-image-wrapper' href="https://github.com/standen1" target="blank">
-                    <Image
-                        src={GitHub}
-                        alt="GitHub"
-                        width={32}
-                        height={32}
-                    />
-                </a>
+    <>
+        <Contact />
+        <SiteFooter data-testid="site-footer">
+            <div className="footer-wrapper">
+                <p>
+                    {'\u00A9'}Sean Standen {new Date().getFullYear()}
+                </p>
             </div>
-            <p>
-                {'\u00A9'}Sean Standen {new Date().getFullYear()}
-            </p>
-        </div>
-    </SiteFooter>
+        </SiteFooter>
+    </>
   )
 };
 
@@ -54,15 +40,8 @@ const SiteFooter = styled.footer`
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-
-        .social-wrapper {
-            display: flex;
-            justify-content: center;
-            column-gap: 30px;
-            
-        }
 
         p {
             display: block;
