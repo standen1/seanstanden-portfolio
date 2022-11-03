@@ -64,6 +64,7 @@ interface FullScreenDivProps {
 
 const FullScreenDiv = styled.div<FullScreenDivProps>`
     display: block;
+    position: relative;
     width: 100%;
     height: ${props => props.height};
 
@@ -87,6 +88,6 @@ const FullScreenDiv = styled.div<FullScreenDivProps>`
         align-items: center;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     }
 `;
