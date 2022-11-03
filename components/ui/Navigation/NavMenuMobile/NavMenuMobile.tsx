@@ -17,6 +17,14 @@ export default function NavMenuMobile({isOpen, closeNavBar}: NavMenuMobileProps)
     return (
         <Div as={motion.div} initial="closed" animate={isOpen ? "open" : "closed"} variants={navBGAnimation}>
           <motion.ul animate={isOpen ? "open" : "closed"} variants={navMenuAnimation}>
+            <motion.li variants={navLinkAnimation}>
+              <Link 
+                href="/"
+                onClick={closeNavBar}
+              >
+                Home
+              </Link>
+            </motion.li>
             {/* <motion.li variants={navLinkAnimation}>
               <Link 
                 href="/#about"

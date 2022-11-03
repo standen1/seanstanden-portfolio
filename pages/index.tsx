@@ -35,6 +35,7 @@ const Home: NextPage = () => {
         <section id="portfolio" style={{padding: '100px 20px'}}>
             <Portfolio />
         </section>
+        <section id="contact"></section>
       </Main>
     </>
   )
