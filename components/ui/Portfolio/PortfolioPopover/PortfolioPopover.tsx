@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Modal from "../Modal/Modal";
-import Button from '../Button/Button';
-import CloseIcon from '../CloseIcon/CloseIcon';
+import Modal from "../../Modal/Modal";
+import Button from '../../Button/Button';
+import CloseIcon from '../../CloseIcon/CloseIcon';
 
 interface portfolioItem {
     title: string;
@@ -47,12 +47,16 @@ export default function PortfolioPopover({portfolioItem, close}: PortfolioPopove
 }
 
 const Div = styled.div`
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 
     .popover {
         position: relative;
