@@ -17,7 +17,7 @@ const Resume: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://seanstanden.dev/background-images/record-vid-still.png"
+          content="https://seanstanden.dev/background-images/nature-vid-still.png"
         />
         <meta property="og:url" content="https://seanstanden.dev/resume" />
         <meta name="twitter:title" content="Sean Standen | Resume" />
