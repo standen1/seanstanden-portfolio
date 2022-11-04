@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Sean Standen | Dev
+## [seanstanden.dev](https://seanstanden.dev/)
 
-First, run the development server:
+This is the source code for my portfolio website.  The website is linked in the header above.
+
+## Installation
+
+Install my-project with Git Clone or the download button. Once installed, cd into the project and run npm install.
 
 ```bash
-npm run dev
-# or
-yarn dev
+  git clone https://github.com/standen1/seanstanden-portfolio.git
+  npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project has configuration for VSCode DevContainers. So, if you would rather work in a container environment, I highly recommend you install the appropriate extensions to run DevContainers in VSCode and clone the repo into a DevContainer.  Links on how to do that are listed here:
+[VS Code DevContainers](https://code.visualstudio.com/docs/devcontainers/containers).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contributing
 
-## Learn More
+Because this is a portfolio website for myself, I do not allow contributions from others.  However, if you see something that needs to be fixed, please feel free to send me a message and I will look into it accordingly.  I do encourage anyone who is interested to download the repo and get ideas or inspiration from my code.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+For support, email standen.sean@gmail.com or sean@webpunk.tech.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Client:** Next, React, TypeScript, Framer Motion, and Styled Components
+
+**Testing:** Jest and React Testing Library
+
+**CI/CD:** GitHub Actions for both preview and production deployments.
+
+## Roadmap
+
+- Animations for onload and for scrolling elements.
+
+- Animation for touch events to make the mobile experience more interactive.
+
+- Improved Comments and Documentation.
+
+- Privacy Policy.
+
+- Analytics integration.
+
+- Stronger type checking.
+
+- Improved Testing strategy.
+
+
+## Authors
+
+- [@standen1](https://www.github.com/standen1)
+
+
+
+
+![Logo](https://seanstanden.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FSStanden_Logo_Text_Color.b61e0999.png&w=640&q=75)
+
