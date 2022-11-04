@@ -8,8 +8,27 @@ const Resume: NextPage = () => {
     <>
       <Head>
         <title>Sean Standen | Resume</title>
-        <meta name="description" content="Web Developer from San Diego who specializes in modern JavaScript frameworks." />
+        <meta name="description" content="Web Developer from San Diego who specializes in modern JavaScript framework such as React, Next, and Express." />
         <link rel="icon" href="favicon/favicon.ico" />
+        <meta property="og:title" content="Sean Standen | Resume" />
+        <meta
+          property="og:description"
+          content="Web Developer from San Diego who specializes in modern JavaScript framework such as React, Next, and Express."
+        />
+        <meta
+          property="og:image"
+          content="https://seanstanden.dev/background-images/record-vid-still.png"
+        />
+        <meta property="og:url" content="https://seanstanden.dev/resume" />
+        <meta name="twitter:title" content="Sean Standen | Resume" />
+        <meta
+          name="twitter:description"
+          content="Web Developer from San Diego who specializes in modern JavaScript framework such as React, Next, and Express."
+        />
+        <meta
+          name="twitter:image"
+          content="https://seanstanden.dev/background-images/nature-vid-still.png"
+        />
       </Head>
 
       <Main>
