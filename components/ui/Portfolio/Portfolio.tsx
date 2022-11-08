@@ -35,6 +35,4 @@ const Div = styled.div`
         margin: 0 auto;
         justify-content: center;
     }
-    
-    
 `;

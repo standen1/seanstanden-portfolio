@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styled from 'styled-components';
 import About from '../components/ui/About/About';
+import Skills from '../components/ui/Skills/Skills';
 
 //Import wrapper components
 import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
@@ -54,6 +55,10 @@ const Home: NextPage = () => {
         
         <section id="portfolio">
             <Portfolio />
+        </section>
+
+        <section id="skills">
+            <Skills />
         </section>
         
         <section id="contact"></section>
