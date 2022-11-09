@@ -2,10 +2,10 @@ export const routeAnimations = {
     initial: {
         opacity: 0
     },
-    in: {
+    visible: {
         opacity: 1
     },
-    out: {
+    exit: {
         opacity: 0
     }
 }

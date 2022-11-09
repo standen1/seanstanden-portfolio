@@ -1,19 +1,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+//import section components
+import Intro from '../components/ui/Intro/Intro';
+import Portfolio from '../components/ui/Portfolio/Portfolio';
 import About from '../components/ui/About/About';
 import Skills from '../components/ui/Skills/Skills';
 
-//Import wrapper components
-import ComingSoon from '../components/ui/ComingSoon/ComingSoon';
-import FullScreenImageOrVideo from '../components/ui/FullScreenImageOrVideo/FullScreenImageOrVideo';
-import FullScreenWrapper from '../components/ui/FullScreenWrapper/FullScreenWrapper';
-import Intro from '../components/ui/Intro/Intro';
+//import animations
+import { 
+  routeAnimations,
 
-//import section components
-import Portfolio from '../components/ui/Portfolio/Portfolio';
-
+} from '../animations/Animations';
 
 const Home: NextPage = () => {
   return (
@@ -43,7 +43,11 @@ const Home: NextPage = () => {
         />
       </Head>
       
-      <Main>
+      <Main as={motion.div} 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }} 
+      >
 
         <section id="welcome">
           <Intro />
