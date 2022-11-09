@@ -2,6 +2,15 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import styled from 'styled-components';
+import { useReducedMotion } from 'framer-motion';
+
+/** This component takes in a backgroundURL string
+ * that is either a video or an image.  If it is a video,
+ * it takes an isVideo boolean to render the video instead
+ * of a background image.  It also will check whether the
+ * user prefers reduced motion.  If the user prefers reduced motion,
+ * it will use the fallback image.
+ */
 
 export interface FullScreenImageOrVideoProps {
     backgroundURL: string;
@@ -15,6 +24,7 @@ type screenHeight = number | undefined;
 
 export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, poster, alt = "Sean Standen | Web Developer", children}: FullScreenImageOrVideoProps): JSX.Element {
     const [ containerHeight, setContainerHeight ] = useState('100vh');
+    const shouldReducedMotion = useReducedMotion();
 
     const handleResize = () => {
         setContainerHeight(`${window.innerHeight}px`);
@@ -27,6 +37,18 @@ export default function FullScreenImageOrVideo({backgroundURL, isVideo = false, 
 
     const background = () => {
         if (isVideo) {
+            if (shouldReducedMotion) {
+                return (
+                    <div className='imageWrapper'>
+                        <Image 
+                            src={backgroundURL}
+                            alt={alt}
+                            fill
+                            
+                        />
+                    </div>
+                );
+            }
             return (
                 <div className='videoWrapper'>
                     <video width="100%" height="100%" preload="auto" autoPlay muted loop poster={poster} id="bgvid">

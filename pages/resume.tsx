@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-
+import { motion } from 'framer-motion';
 import Head from 'next/head'
 import styled from 'styled-components';
 
@@ -31,7 +31,11 @@ const Resume: NextPage = () => {
         />
       </Head>
 
-      <Main>
+      <Main as={motion.div} 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }} 
+      >
         <section id="resume">
             <iframe src='/resume.pdf' title='resume' width="100%" height="600px" />
         </section>
