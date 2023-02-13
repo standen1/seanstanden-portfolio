@@ -33,6 +33,9 @@ export const navMenuAnimation = {
 }
 
 export const navLinkAnimation = {
+    initial: {
+        opacity: 0
+    },
     open: {
         opacity: 1,
         x: 0,
@@ -62,5 +65,52 @@ export const overlayAnimation = {
         transition: {
             delay: 0.7
         }
+    }
+}
+
+export const navWrapperLoadAnimation = {
+    initial: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            delay: 1,
+            type: "ease-in"
+        }
+    },
+    exit: {
+        opacity: 0
+    }
+}
+
+export const desktopNavLoadAnimation = {
+    initial: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            delay: 1,
+            duration: 0.2,
+            staggerChildren: 0.2
+        }
+    },
+    exit: {
+        opacity: 0
+    }
+}
+
+export const desktopNavLinkAnimation = {
+    initial: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1,
+        duration: 0.2
+    },
+    exit: {
+        opacity: 0,
+        duration: 0.2
     }
 }

@@ -7,12 +7,9 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         margin: 0;
     }
-    
-    html {
-        scroll-behavior: smooth;
-    }
 
     body {
+        scroll-behavior: smooth;
         font-family: 'Poppins', sans-serif;
         width: 100%;
         padding: 0;
