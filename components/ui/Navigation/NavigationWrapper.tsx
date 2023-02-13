@@ -1,11 +1,11 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-
-//dynamic imports
-const NavMenuDesktop = dynamic(() => import('./NavMenuDesktop/NavMenuDesktop'));
-const NavMenuMobile = dynamic(() => import('./NavMenuMobile/NavMenuMobile'));
-const MenuToggle = dynamic(() => import('./MenuToggle/MenuToggle'));
-const Modal = dynamic(() => import('../Modal/Modal'));
+import { motion } from 'framer-motion';
+import { navWrapperLoadAnimation } from '../../../animations/NavBar';
+import NavMenuDesktop from './NavMenuDesktop/NavMenuDesktop';
+import NavMenuMobile from './NavMenuMobile/NavMenuMobile';
+import MenuToggle from './MenuToggle/MenuToggle';
+import Modal from '../Modal/Modal';
 
 export default function NavigationWrapper() {
     const [ navBarOpen, setNavBarOpen ] = useState(false);
@@ -27,12 +27,12 @@ export default function NavigationWrapper() {
     }, [])
 
     const mobileMenu = (
-        <>
+        <motion.div variants={navWrapperLoadAnimation}>
             <MenuToggle toggle={() => setNavBarOpen(!navBarOpen)} isOpen={navBarOpen} />
             {/* <NavMenuDesktop /> */}
             <NavMenuMobile isOpen={navBarOpen} closeNavBar={closeNavBar} />
             {navBarOpen && <Modal close={closeNavBar} />}
-        </>
+        </motion.div>
     );
 
   return (

@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
+import {motion} from 'framer-motion';
 
 import logo from '../../../public/logo/SStanden_Logo_Text_Color.png';
 import NavigationWrapper from '../Navigation/NavigationWrapper';
+import { routeAnimations } from '../../../animations/Animations';
+import { navWrapperLoadAnimation } from '../../../animations/NavBar';
 
 
 export default function Header(): JSX.Element {

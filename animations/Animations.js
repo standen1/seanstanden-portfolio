@@ -3,7 +3,11 @@ export const routeAnimations = {
         opacity: 0
     },
     visible: {
-        opacity: 1
+        opacity: 1,
+        transition: {
+            delay: 0.6,
+            type: "ease-in"
+        }
     },
     exit: {
         opacity: 0
