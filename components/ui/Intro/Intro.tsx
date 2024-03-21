@@ -9,8 +9,8 @@ export default function Intro(): JSX.Element {
           poster="/background-images/record-vid-still.png"
         >
             <Div>
-            <h2>Welcome</h2>
-            <p>I’m Sean Standen, a Web Developer from San Diego, California who specializes in building websites and web applications using modern JavaScript frameworks.</p>
+            <h2>Hello, I'm Sean Standen</h2>
+            <p>I am a Web Developer from San Diego, California who specializes in building websites and web applications using various web technologies.</p>
             </Div>
         </FullScreenImageOrVideo>
     );

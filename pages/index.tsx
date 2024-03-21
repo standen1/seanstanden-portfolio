@@ -20,12 +20,12 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Sean Standen | Web Developer Specializing in Modern JavaScript Frameworks</title>
-        <meta name="description" content="Web Developer from San Diego who specializes in modern JavaScript framework such as React, Next, and Express." />
+        <meta name="description" content="I’m Sean Standen, a Web Developer from San Diego, California who specializes in building websites and web applications using various web technologies." />
         <link rel="icon" href="favicon/favicon.ico" />
         <meta property="og:title" content="Sean Standen | Web Developer Specializing in Modern JavaScript Frameworks" />
         <meta
           property="og:description"
-          content="Web Developer from San Diego who specializes in modern JavaScript framework such as React, Next, and Express."
+          content="I’m Sean Standen, a Web Developer from San Diego, California who specializes in building websites and web applications using various web technologies."
         />
         <meta
           property="og:image"
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         <meta name="twitter:title" content="Sean Standen | Web Developer Specializing in Modern JavaScript Frameworks" />
         <meta
           name="twitter:description"
-          content="Web Developer from San Diego who specializes in modern JavaScript framework such as React, Next, and Express."
+          content="I’m Sean Standen, a Web Developer from San Diego, California who specializes in building websites and web applications using various web technologies."
         />
         <meta
           name="twitter:image"
