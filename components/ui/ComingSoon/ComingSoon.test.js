@@ -9,7 +9,7 @@ describe('ComingSoon Component', () => {
         expect(asFragment()).toMatchInlineSnapshot(`
 <DocumentFragment>
   <div
-    class="sc-b850c227-0 izVre"
+    class="sc-b850c227-0 bmkOzu"
   >
     <h1>
       Coming Soon
